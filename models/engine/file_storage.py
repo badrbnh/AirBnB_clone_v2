@@ -59,12 +59,20 @@ class FileStorage:
             pass
     
     def delete(self, obj=None):
-        """Add a new public instance method: def delete(self, obj=None):
-        to delete obj from __objects if it s inside - if obj is equal to None,
-        the method should not do anything"""
+        """Delete obj from __objects if it's inside. 
+        If obj is None, the method should not do anything."""
 
-        if obj in self.__objects:
-            del(self.__objects[obj])
-            self.save()
-        else:
+        if obj is None:
             return
+
+        # Search for the object's key in the dictionary
+        key_to_delete = None
+        for key, value in self.__objects.items():
+            if value == obj:
+                key_to_delete = key
+                break
+
+        # If the object's key is found, delete it from the dictionary
+        if key_to_delete:
+            del(self.__objects[key_to_delete])
+            self.save()
