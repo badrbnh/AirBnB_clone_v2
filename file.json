@@ -1,53 +1,21 @@
 {
-    "State.d6663a22-f029-42dd-baaa-b652fdaffe5a": {
-        "id": "d6663a22-f029-42dd-baaa-b652fdaffe5a",
-        "created_at": "2023-09-19T05:02:37.528246",
-        "updated_at": "2023-09-19T05:02:37.528255",
+    "State.1734e40a-4fb0-427d-a2f6-1480ced0993d": {
+        "id": "1734e40a-4fb0-427d-a2f6-1480ced0993d",
+        "created_at": "2023-09-19T19:27:13.026389",
+        "updated_at": "2023-09-19T19:27:13.026418",
         "__class__": "State"
     },
-    "State.f1cd8c13-48dd-4842-98d5-bba15d638f79": {
-        "id": "f1cd8c13-48dd-4842-98d5-bba15d638f79",
-        "created_at": "2023-09-19T05:06:49.968533",
-        "updated_at": "2023-09-19T05:06:49.968541",
+    "State.25a1bf4f-ec34-4d35-975b-517ced627fed": {
+        "id": "25a1bf4f-ec34-4d35-975b-517ced627fed",
+        "created_at": "2023-09-19T19:27:27.512261",
+        "updated_at": "2023-09-19T19:27:27.512266",
         "name": "California",
         "__class__": "State"
     },
-    "State.640d060b-dc12-47e2-8cf9-9ac2ab6d562e": {
-        "id": "640d060b-dc12-47e2-8cf9-9ac2ab6d562e",
-        "created_at": "2023-09-19T05:09:22.163634",
-        "updated_at": "2023-09-19T05:09:22.163639",
-        "name": "Arizona",
-        "__class__": "State"
-    },
-    "State.07540ffc-daf0-4a63-b99e-130e540935dc": {
-        "id": "07540ffc-daf0-4a63-b99e-130e540935dc",
-        "created_at": "2023-09-19T19:04:09.462849",
-        "updated_at": "2023-09-19T19:04:09.462857",
-        "name": "California",
-        "__class__": "State"
-    },
-    "Place.191b0043-4c9d-46b3-9143-1a9582acaa53": {
-        "id": "191b0043-4c9d-46b3-9143-1a9582acaa53",
-        "created_at": "2023-09-19T19:15:43.912893",
-        "updated_at": "2023-09-19T19:15:43.912898",
-        "__class__": "Place"
-    },
-    "Place.dbd38bf5-b05e-412f-8036-abed214377b2": {
-        "id": "dbd38bf5-b05e-412f-8036-abed214377b2",
-        "created_at": "2023-09-19T19:21:44.648295",
-        "updated_at": "2023-09-19T19:21:44.648301",
-        "__class__": "Place"
-    },
-    "Place.3c75ce96-9fff-49b5-a82d-ed68f0240be9": {
-        "id": "3c75ce96-9fff-49b5-a82d-ed68f0240be9",
-        "created_at": "2023-09-19T19:22:58.134458",
-        "updated_at": "2023-09-19T19:22:58.134473",
-        "__class__": "Place"
-    },
-    "Place.9425c2aa-c567-4737-81e9-359ff2826f29": {
-        "id": "9425c2aa-c567-4737-81e9-359ff2826f29",
-        "created_at": "2023-09-19T19:25:43.727280",
-        "updated_at": "2023-09-19T19:25:43.727305",
+    "Place.6d294c1e-35c7-48c5-a99f-d78d486e5196": {
+        "id": "6d294c1e-35c7-48c5-a99f-d78d486e5196",
+        "created_at": "2023-09-19T19:27:49.983784",
+        "updated_at": "2023-09-19T19:27:49.983790",
         "city_id": "0001",
         "user_id": "0001",
         "name": "My_little_house",
