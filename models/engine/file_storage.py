@@ -11,14 +11,14 @@ class FileStorage:
     def all(self, cls=None):
         """Returns a dictionary of models currently in storage"""
         if cls is None:
-            return FileStorage.__objects  # return all objects if no class is specified
+            return FileStorage.__objects
         else:
-                    # filter the dictionary based on the class name
             filtered_dict = {}
             for key, value in FileStorage.__objects.items():
-                if type(value).__name__ == cls:
+                if isinstance(value, cls):
                     filtered_dict[key] = value
             return filtered_dict
+
 
 
     def new(self, obj):
@@ -32,7 +32,7 @@ class FileStorage:
             temp.update(FileStorage.__objects)
             for key, val in temp.items():
                 temp[key] = val.to_dict()
-            json.dump(temp, f)
+            json.dump(temp, f, indent=4)
 
     def reload(self):
         """Loads storage dictionary from file"""
