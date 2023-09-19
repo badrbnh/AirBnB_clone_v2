@@ -129,8 +129,8 @@ class HBNBCommand(cmd.Cmd):
         new_instance = HBNBCommand.classes[class_name]()
 
         if len(new[2]) > 0:
-            attributes = new[2].split(", ")
-            for attribute in attributes:
+            atts = new[2].split(" ")
+            for attribute in atts:
                 key, value = attribute.split("=")
                 if value[0] == '"' and value[-1] == '"':
                     value = value[1:-1]

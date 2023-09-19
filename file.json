@@ -25,5 +25,38 @@
         "updated_at": "2023-09-19T19:04:09.462857",
         "name": "California",
         "__class__": "State"
+    },
+    "Place.191b0043-4c9d-46b3-9143-1a9582acaa53": {
+        "id": "191b0043-4c9d-46b3-9143-1a9582acaa53",
+        "created_at": "2023-09-19T19:15:43.912893",
+        "updated_at": "2023-09-19T19:15:43.912898",
+        "__class__": "Place"
+    },
+    "Place.dbd38bf5-b05e-412f-8036-abed214377b2": {
+        "id": "dbd38bf5-b05e-412f-8036-abed214377b2",
+        "created_at": "2023-09-19T19:21:44.648295",
+        "updated_at": "2023-09-19T19:21:44.648301",
+        "__class__": "Place"
+    },
+    "Place.3c75ce96-9fff-49b5-a82d-ed68f0240be9": {
+        "id": "3c75ce96-9fff-49b5-a82d-ed68f0240be9",
+        "created_at": "2023-09-19T19:22:58.134458",
+        "updated_at": "2023-09-19T19:22:58.134473",
+        "__class__": "Place"
+    },
+    "Place.9425c2aa-c567-4737-81e9-359ff2826f29": {
+        "id": "9425c2aa-c567-4737-81e9-359ff2826f29",
+        "created_at": "2023-09-19T19:25:43.727280",
+        "updated_at": "2023-09-19T19:25:43.727305",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My_little_house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
     }
 }
