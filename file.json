@@ -18,5 +18,12 @@
         "updated_at": "2023-09-19T05:09:22.163639",
         "name": "Arizona",
         "__class__": "State"
+    },
+    "State.07540ffc-daf0-4a63-b99e-130e540935dc": {
+        "id": "07540ffc-daf0-4a63-b99e-130e540935dc",
+        "created_at": "2023-09-19T19:04:09.462849",
+        "updated_at": "2023-09-19T19:04:09.462857",
+        "name": "California",
+        "__class__": "State"
     }
 }
