@@ -9,17 +9,6 @@ class FileStorage:
     __objects = {}
 
     def all(self, cls=None):
-<<<<<<< Updated upstream
-        """Returns a dictionary of models currently in storage"""
-        if cls is None:
-            return FileStorage.__objects
-        else:
-            filtered_dict = {}
-            for key, value in FileStorage.__objects.items():
-                if isinstance(value, cls):
-                    filtered_dict[key] = value
-            return filtered_dict
-=======
         """returns a dictionary of instantiated objects in __objects
         wjen a 'cls' is specified, returns a dictionary of objects of that type
         If It's not, returns the __objects dictionary
@@ -39,7 +28,6 @@ class FileStorage:
             del self.__objects["{}.{}".format(type(obj).__name__, obj.id)]
         except (AttributeError, KeyError):
             pass
->>>>>>> Stashed changes
 
     def new(self, obj):
         """Adds new object to storage dictionary"""
@@ -74,12 +62,12 @@ class FileStorage:
             with open(FileStorage.__file_path, 'r') as f:
                 temp = json.load(f)
                 for key, val in temp.items():
-                    self.all()[key] = classes[val['__class__']](**val)
+                        self.all()[key] = classes[val['__class__']](**val)
         except FileNotFoundError:
             pass
-
+    
     def delete(self, obj=None):
-        """Delete obj from __objects if it's inside.
+        """Delete obj from __objects if it's inside. 
         If obj is None, the method should not do anything."""
 
         if obj is None:
@@ -94,5 +82,5 @@ class FileStorage:
 
         # If the object's key is found, delete it from the dictionary
         if key_to_delete:
-            del (self.__objects[key_to_delete])
+            del(self.__objects[key_to_delete])
             self.save()

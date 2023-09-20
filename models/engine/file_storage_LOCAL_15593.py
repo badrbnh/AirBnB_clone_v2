@@ -9,7 +9,6 @@ class FileStorage:
     __objects = {}
 
     def all(self, cls=None):
-<<<<<<< Updated upstream
         """Returns a dictionary of models currently in storage"""
         if cls is None:
             return FileStorage.__objects
@@ -19,27 +18,6 @@ class FileStorage:
                 if isinstance(value, cls):
                     filtered_dict[key] = value
             return filtered_dict
-=======
-        """returns a dictionary of instantiated objects in __objects
-        wjen a 'cls' is specified, returns a dictionary of objects of that type
-        If It's not, returns the __objects dictionary
-        """
-        if cls is not None:
-            if type(cls) == str:
-                cls = eval(cls)
-            cls_dict = {}
-            for key, val in self.__objects.items():
-                if type(val) == cls:
-                    cls_dict[key] = val
-            return cls_dict
-        return self.__objects
-    def delete(self, obj=None):
-        """If a given object exists,Deletes it from '__objects'"""
-        try:
-            del self.__objects["{}.{}".format(type(obj).__name__, obj.id)]
-        except (AttributeError, KeyError):
-            pass
->>>>>>> Stashed changes
 
     def new(self, obj):
         """Adds new object to storage dictionary"""
