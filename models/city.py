@@ -5,6 +5,7 @@ from sqlalchemy import Column, ForeignKey, String
 from sqlalchemy.orm import relationship
 from os import getenv
 
+
 class City(BaseModel, Base):
     """represents a city for a MySQL database
     inherits from SQLAlchemy Base and links to the MySQL table cities

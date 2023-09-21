@@ -10,6 +10,7 @@ from models.state import State
 from models.user import User
 import os
 
+
 class FileStorage:
     """manages storage of HBNB models in JSON format"""
     __file_path = "file.json"
@@ -36,7 +37,8 @@ class FileStorage:
 
     def save(self):
         """saves dictionary to file"""
-        dict_obj = {obj: self.__objects[obj].to_dict() for obj in self.__objects.keys()}
+        dict_obj = {obj: self.__objects[obj].to_dict()
+                    for obj in self.__objects.keys()}
         with open(self.__file_path, "w", encoding="utf-8") as fl:
             json.dump(dict_obj, fl)
 

@@ -13,6 +13,7 @@ from sqlalchemy.exc import IntegrityError, OperationalError
 from os import getenv
 from models.base_model import Base
 
+
 class DBStorage:
     """database storage engine"""
     __engine = None
