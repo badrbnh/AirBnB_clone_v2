@@ -133,9 +133,6 @@ class HBNBCommand(cmd.Cmd):
             for attribute in atts:
                 key, value = attribute.split("=")
                 if value[0] == '"' and value[-1] == '"':
-                    value = value[1:-1]
-                elif len(value) >= 2 and value[0] == '"'\
-                        and value[-1] == '"':
                     value = value[1:-1].replace("_", " ")
                 elif '.' in value:
                     value = float(value)
