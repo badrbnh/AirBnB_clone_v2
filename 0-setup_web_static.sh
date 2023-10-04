@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#Upgrading nginx configuration
 # Install nginx if not already installed
 if ! command -v nginx &> /dev/null;
 then
@@ -29,7 +29,6 @@ sudo ln -s "$source_path" "$symlink_path"
 sudo chown -R ubuntu:ubuntu /data/
 sudo chgrp -R ubuntu /data/
 
-#Update the Nginx configuration to serve the content
 #Update the Nginx configuration to serve the content
 df_path="/etc/nginx/sites-available/default"
 new_loc="\n\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t}"
