@@ -8,11 +8,10 @@ from datetime import datetime
 @task
 def do_pack():
     """Function that archive web_static folder """
+    date = datetime.now().strftime("%Y%m%d%H%M%S")
     mkdir = "mkdir -p versions"
-    datetime = datetime.now()
-    date = datetime.strftime("%Y%m%d%H%M%S")
-    file = "versions/web_static_{}.tgz".format(date)
-    print("Packing web_static to {}".format(file))
-    if local('{} && tar -cvzf {} web_static'.format(mkdir, file)).succeeded:
-        return file
+    path = "versions/web_static_{}.tgz".format(date)
+    print("Packing web_static to {}".format(path))
+    if local('{} && tar -cvzf {} web_static'.format(mkdir, path)).succeeded:
+        return path
     return None
