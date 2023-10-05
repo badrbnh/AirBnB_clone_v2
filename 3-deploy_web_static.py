@@ -18,6 +18,7 @@ def do_pack():
     print("Packing web_static to {}".format(path))
     if local('{} && tar -cvzf {} web_static'.format(mkdir, path)).succeeded:
         return path
+        print("web_static packed: {} -> {}Bytes".format(path, size))
     return None
 
 
