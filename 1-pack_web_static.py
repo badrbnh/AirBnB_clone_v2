@@ -9,14 +9,12 @@ from os import path
 @task
 def do_pack():
     """Function that archive web_static folder """
-
-    if path.exists('versions') is False:
-        local('mkdir versions')
+    mkdir = "mkdir -p versions"
     datetime = datetime.now()
     date = datetime.strftime("%Y%m%d%H%M%S")
     file = "versions/web_static_{}.tgz".format(date)
-    local('tar -cvzf {} web_static'.format(file))
-    if file:
+    print("Packing web_static to {}".format(file))
+    if local('{} && tar -cvzf {} web_static'.format(mkdir, file)).succeeded:
         return file
     else:
         return None
