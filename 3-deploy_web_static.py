@@ -20,6 +20,7 @@ def do_pack():
         return path
     return None
 
+
 @task
 def do_deploy(archive_path):
     """ Function that deply archive"""
@@ -43,6 +44,7 @@ def do_deploy(archive_path):
     run('ln -s {} /data/web_static/current'.format(data_path))
     print("New version deployed!")
     return True
+
 
 @task
 def deploy():
