@@ -10,10 +10,12 @@ def hello_hbnb():
     """ Prints a message when the route / is taken in the web application"""
     return "Hello HBNB!"
 
+
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """ Prints a message when the route /hbnb is taken in the web application"""
+    """Prints a message when the route /hbnb is taken in the web application"""
     return "HBNB"
+
 
 if __name__ == '__main__':
     """ Makes the app run when called from the command line"""
