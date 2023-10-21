@@ -20,9 +20,12 @@ class State(BaseModel, Base):
     if getenv("HBNB_TYPE_STORAGE") != "db":
         @property
         def cities(self):
-            """gets a list of the related City objects"""
+            """getter attribute in case of file storage"""
+            from models import storage
+            from models.city import City
             city_list = []
-            for city in list(models.storage.all(City).values()):
+            for city in storage.all(City).values():
                 if city.state_id == self.id:
                     city_list.append(city)
             return city_list
+

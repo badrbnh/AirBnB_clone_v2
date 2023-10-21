@@ -6,7 +6,7 @@ from datetime import datetime
 from os.path import exists, splitext
 
 
-env.hosts = ['54.87.180.223', '52.23.245.155']
+env.hosts = ['54.87.180.223', '52.23.245.155', 'localhost']
 
 
 @task
