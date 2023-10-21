@@ -1,19 +1,25 @@
 #!/usr/bin/python3
+""" Starts a Flask web application"""""
+
 from flask import *
 from models import storage
-
+from models.state import State
 app = Flask(__name__)
 
-@app.teardown_appcontext
-def close_storage(exception):
-    """Remove the current SQLAlchemy Session."""
-    storage.close()
 
-@app.route('/states_list', strict_slashes=False)
+@app.route("/states_list", strict_slashes=False)
 def states_list():
-    """Display a list of states."""
-    states = sorted(storage.all("State").values(), key=lambda state: state.name)
+    """Display h1 Number"""
+    states = storage.all(State)
     return render_template('7-states_list.html', states=states)
 
+
+@app.teardown_appcontext
+def teardown_db(self):
+    """Remove the current SQLAlchemy Session"""
+    storage.close()
+
+
 if __name__ == '__main__':
+    """ Makes the app run when called from the command line"""
     app.run(host='0.0.0.0', port=5000)
