@@ -9,6 +9,8 @@
     <ul>
       {% for city in cities %} {% if city.state_id == state.id %}
       <li>{{ state.id }}: <b>{{ city.name }}</b></li>
+      {% else %}
+        <h1>“Not found!”</h1>
       {% endif %} {% endfor %}
     </ul>
   </body>
