@@ -4,14 +4,15 @@
     <title>HBNB</title>
   </head>
   <body>
+    {%if state == None%}
+    <h1>Not found!</h1>
+    {%else%}
     <h1>State: {{ state.name }}</h1>
     <h3>Cities:</h3>
     <ul>
-      {%if state == None%}
-      <h1>Not found!</h1>
-      {%endif%} {% for city in state.cities %}
+      {% for city in state.cities %}
       <li>{{ state.id }}: <b>{{ city.name }}</b></li>
-      {% endfor %}
+      {% endfor %} {%endif%}
     </ul>
   </body>
 </html>
