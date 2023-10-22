@@ -23,10 +23,8 @@ def states_list_id(id):
     sorted_cities = sorted(cities, key=lambda city: city.name)
     for state in sorted_states:
         if state.id == id:
-            for city in sorted_cities:
-                if city.state_id == id:
-                    return render_template('9-states.html', state=state,
-                                           city=city)
+            return render_template('9-states.html', state=state,
+                                   cities=sorted_cities)
     return render_template('9-states.html', state=None)
 
 
