@@ -19,11 +19,9 @@ def states_list():
 def states_list_id(id):
     states = storage.all(State).values()
     sorted_states = sorted(states, key=lambda state: state.name)
-    cities = storage.all(City).values()
-    sorted_cities = sorted(cities, key=lambda city: city.name)
     for state in sorted_states:
         if state.id == id:
-            return render_template('9-states.html', state=state, cities=sorted_cities)
+            return render_template('9-states.html', state=state)
     return render_template('9-states.html', state=None)
 
 
