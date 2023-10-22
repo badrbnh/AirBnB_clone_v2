@@ -7,11 +7,11 @@
     <h1>State: {{ state.name }}</h1>
     <h3>Cities:</h3>
     <ul>
-      {% for city in state.cities %} {% if city.state_id == state.id %}
+      {%if state == None%}
+      <h1>hey</h1>
+      {%endif%} {% for city in state.cities %}
       <li>{{ state.id }}: <b>{{ city.name }}</b></li>
-      {% else %}
-        <h1>“Not found!”</h1>
-      {% endif %} {% endfor %}
+      {% endfor %}
     </ul>
   </body>
 </html>
