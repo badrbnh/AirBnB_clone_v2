@@ -4,7 +4,7 @@
     <title>HBNB</title>
   </head>
   <body>
-    {%if state == None%}
+    {%if id%} {%if state == None%}
     <h1>Not found!</h1>
     {%else%}
     <h1>State: {{ state.name }}</h1>
@@ -12,7 +12,17 @@
     <ul>
       {%for city in cities%} {%if city.state_id == state.id%}
       <li>{{ state.id }}: <b>{{ city.name }}</b></li>
-      {%endif%} {%endfor%} {%endif%}
+      {%endif%} {%endfor%} {%endif%} {%else%}
+      <h1>States</h1>
+      <ul>
+        {% for item in states %}
+        <li>
+          {{item.id}}: <b>{{item.name}}</b>
+          {% endfor %}
+        </li>
+      </ul>
+
+      {%endif%}
     </ul>
   </body>
 </html>

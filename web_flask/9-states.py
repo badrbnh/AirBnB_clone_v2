@@ -9,23 +9,21 @@ app = Flask(__name__)
 
 
 @app.route("/states", strict_slashes=False)
-def states_list():
-    states = storage.all(State).values()
-    sorted_states = sorted(states, key=lambda state: state.name)
-    return render_template('7-states_list.html', states=sorted_states)
-
-
 @app.route("/states/<id>", strict_slashes=False)
-def states_list_id(id):
+def states_list_id(id=None):
     states = storage.all(State).values()
     sorted_states = sorted(states, key=lambda state: state.name)
     cities = storage.all(City).values()
     sorted_cities = sorted(cities, key=lambda city: city.name)
-    for state in sorted_states:
-        if state.id == id:
-            return render_template('9-states.html', state=state,
-                                   cities=sorted_cities)
-    return render_template('9-states.html', state=None)
+    if id is not None:
+        for state in sorted_states:
+            if state.id == id:
+                return render_template('9-states.html', state=state,
+                                    cities=sorted_cities, id=True)
+            else:
+                return render_template('9-states.html', state=None, id=id)
+    else:
+        return render_template('9-states.html', states=sorted_states)
 
 
 @app.teardown_appcontext
